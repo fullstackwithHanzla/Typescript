@@ -63,6 +63,27 @@ const App = () => {
   //   return num * 2;
   // }
 
+  // Void functions
+  // Void is a type that represents the absense of any value. it is often used as the return type for functions that do not return a value
+  function noReturn(message:string):void {
+    console.log(message);
+  }
+  noReturn("hello How are you!")
+
+  // Array types in depth 
+  // 2 Type of array
+  // Using the square brackets notation [] to indicate an array of a specific type
+
+  const numbers: number[] = [1,2,3,4,5,6,7]
+
+  // Using the generic Array<type> notation to indicate an array of a specific type
+  
+  // Not useAble tho
+  // const ArrayNames: Array<string> = ["Alice","Bob","Charlie"]
+
+
+
+
 
   return (
     <div>
@@ -90,7 +111,16 @@ const App = () => {
           <p>Double input values with default values as 10 ( 10x10 ) : {doubleValue()}</p>
           <p>Greeting someone with providing name as parameter : {greetingSomeone(myName)}</p>
           <p>Greeting someone with providing default as  parameter : {greetingSomeone()}</p> 
-          <p>Retunr annotations : {double1(5)}</p>
+          <p>Return annotations : {double1(5)}</p>
+          <h2 className="text-xl font-medium">Void Function</h2>
+          <p></p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-medium">Array Types</h2>
+          <p>{numbers.map((number,index) => (
+            <span key={index}>{number} </span>
+          ))}</p>
         </div>
     </div>
   )
