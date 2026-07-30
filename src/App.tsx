@@ -24,6 +24,46 @@ const App = () => {
   let myColor:any = "Crimson";
   myColor = 20;
 
+  // Function parameters annotations 
+  // Function parameter annotations in TypeScript are used to specify the expected type of the parameters that a function takes
+  const inputVal:number = 10
+  function addOne(num:number){
+    return num + 1;
+  }
+
+
+  // Arrow function annotation
+  const firstVal = 2;
+  const secondVal = 10;
+
+  const doubleValue = (x:number = 10 , y:number = 10) => {
+    return x * y
+  }
+
+  // Default function for example greeting someone
+  function greetingSomeone(name:string = "Anonymous") {
+    return `Hello , ${name}`
+  }
+
+  // Return annotatoins 
+  function double1(x:number):number {
+    return x * x
+  }
+    // ❌ WRONG: Relying on inference
+  // function doubleValue(num: number) {
+  //   if (num > 10) return; // Whoops! Forgot to return a number here.
+  //   return num * 2;
+  // }
+  //  TS infers the return type as: number | undefined
+  //  The bug propagates to the rest of your app.
+
+  //  CORRECT: Explicitly annotating the intent
+  // function doubleValueExplicit(num: number): number {
+  //   if (num > 10) return; // ❌ TS Error: Type 'undefined' is not assignable to type 'number'
+  //   return num * 2;
+  // }
+
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
@@ -38,9 +78,19 @@ const App = () => {
         </div>
 
         <div>
-          <h2 className="text-xl font-medium">Type Interference</h2>
+          <h2 className="text-xl font-medium">Type Interference & Any Type</h2>
           <p>My UserName : {myUsername}</p>
           <p>My color : {myColor}</p>
+        </div>
+
+        <div>
+          <h2 className="text-xl font-medium">Function parameters annotations</h2>
+          <p>Add one ( input value : {inputVal} ) : {addOne(inputVal)}</p>
+          <p>Double input values ( x = {firstVal} , y = {secondVal} ) : {doubleValue(firstVal,secondVal)}</p>
+          <p>Double input values with default values as 10 ( 10x10 ) : {doubleValue()}</p>
+          <p>Greeting someone with providing name as parameter : {greetingSomeone(myName)}</p>
+          <p>Greeting someone with providing default as  parameter : {greetingSomeone()}</p> 
+          <p>Retunr annotations : {double1(5)}</p>
         </div>
     </div>
   )
