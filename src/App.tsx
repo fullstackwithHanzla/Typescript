@@ -81,6 +81,23 @@ const App = () => {
   // Not useAble tho
   // const ArrayNames: Array<string> = ["Alice","Bob","Charlie"]
 
+  // Objects
+
+  const Person : {firstName : string , lastName:string , age : number} = {
+    firstName : "hanzla",
+    lastName : "jamil",
+    age : 20
+  }
+
+  function printUser(): {name : string , age : number , location : string} {
+    return {
+      name :"hanzla",
+      age : 20,
+      location : "NoWhere LMAO"
+    }
+  }
+  const printUserResult = printUser()
+
 
 
 
@@ -121,6 +138,9 @@ const App = () => {
           <p>{numbers.map((number,index) => (
             <span key={index}>{number} </span>
           ))}</p>
+          <h2 className="text-xl font-medium">Object</h2>
+          <p>First Name : {Person.firstName} , Last Name : {Person.lastName} , Age : {Person.age}</p>
+          <p>Function UseAge of objects : {printUserResult.name} , {printUserResult.age} , {printUserResult.location}</p>
         </div>
     </div>
   )
