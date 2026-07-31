@@ -98,6 +98,17 @@ const App = () => {
   }
   const printUserResult = printUser()
 
+  // Type Aliases
+  type Person = {
+    name : string,
+    age : number
+  }
+
+  function printPerson(person:Person) {
+      console.log(`Name : ${person.name} , Age : ${person.age}`);
+  }
+
+  const myPerson : Person = {name : "Hanzla",age : 20}
 
 
 
@@ -141,6 +152,9 @@ const App = () => {
           <h2 className="text-xl font-medium">Object</h2>
           <p>First Name : {Person.firstName} , Last Name : {Person.lastName} , Age : {Person.age}</p>
           <p>Function UseAge of objects : {printUserResult.name} , {printUserResult.age} , {printUserResult.location}</p>
+          <h2 className="text-xl font-medium">Type Aliases</h2>
+          <p>{myPerson.name} , {myPerson.age}</p>
+
         </div>
     </div>
   )
