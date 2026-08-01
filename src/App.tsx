@@ -104,11 +104,50 @@ const App = () => {
     age : number
   }
 
-  function printPerson(person:Person) {
-      console.log(`Name : ${person.name} , Age : ${person.age}`);
-  }
+  // function printPerson(person:Person) {
+  //     console.log(`Name : ${person.name} , Age : ${person.age}`);
+  // }
 
   const myPerson : Person = {name : "Hanzla",age : 20}
+
+  // Another Example of Type aliases
+
+  type User = {
+    name : string,
+    age : number,
+    location : string,
+    // email?:string optional keyword 
+    // readonly AccountNumber : string ,  you can't change the readonly
+  }
+
+  function printOutUser(user:User) {
+    return `Name : ${user.name} , Age : ${user.age} , Location : ${user.location}`
+  }
+
+  const userResult = printOutUser({name : "hanzla" , age : 19 , location : "Nothing"})
+
+
+  // Intersection Types 
+
+  type userInformation = {
+    name : string,
+    age : number,
+    email? : string,
+    location : string
+  }
+
+  type userAccountInformation = {
+    accountNumber : number,
+    password : string
+  }
+
+  type userIntersection = userInformation & userAccountInformation
+
+  function userInfo(user:userIntersection) {
+    return `User's Name : ${user.name} , Age : ${user.age} ,Location : ${user.location} , ${user.email ? `Email : ${user.email}` : ""} , User Account Number : ${user.accountNumber} , User Pass : ${user.password}`
+  }
+
+  const userInfoResult = userInfo({name : "hanzla" , age : 19 , location : "Nothing again lol" , accountNumber : 14210490125803 , password : "Hi how are you"})
 
 
 
@@ -154,7 +193,8 @@ const App = () => {
           <p>Function UseAge of objects : {printUserResult.name} , {printUserResult.age} , {printUserResult.location}</p>
           <h2 className="text-xl font-medium">Type Aliases</h2>
           <p>{myPerson.name} , {myPerson.age}</p>
-
+          <p>{userResult}</p>
+          <p>{userInfoResult}</p>
         </div>
     </div>
   )
