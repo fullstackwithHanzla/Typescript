@@ -150,6 +150,18 @@ const App = () => {
   const userInfoResult = userInfo({name : "hanzla" , age : 19 , location : "Nothing again lol" , accountNumber : 14210490125803 , password : "Hi how are you"})
 
 
+  // Unions 
+  // Unions are used to declare a type that can have one of several possible types . Unions are useful when we wnant to allow a variable or parameter to accept MULTIPLE TYPES using pipe | symbol
+
+  // let pass : string | number = 20
+
+  // let user: userInformation | userAccountInformation = {
+  //   accountNumber : 223,
+  //   password : "password123"
+  // }
+
+  // const arrayRandom: (string | number)[] = [1,2,3,"Hello"] 
+
 
 
   return (
@@ -194,7 +206,7 @@ const App = () => {
           <h2 className="text-xl font-medium">Type Aliases</h2>
           <p>{myPerson.name} , {myPerson.age}</p>
           <p>{userResult}</p>
-          <p>{userInfoResult}</p>
+          <p>{userInfoResult }</p>
         </div>
     </div>
   )
