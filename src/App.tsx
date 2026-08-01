@@ -164,6 +164,26 @@ const App = () => {
 
 
 
+  // Literal Types
+
+
+  // Literal types allow you to specify a value that can only be one specific type literal value. This means that a variable with a literal type can only have one specific value and no other 
+
+
+  // String literal type
+  // let color = "red" | "blue" | "white"
+  // color = "red" , valid
+  // color = "black" , invalid
+
+  // Literal number type
+  // let number = 1 | 2 | 3 
+  // number = 1 , valid 
+  // number = 4, invalid
+
+  // Boolean literal type
+  // let isTrue = true;
+  // isTrue = false
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
