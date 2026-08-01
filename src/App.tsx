@@ -184,6 +184,18 @@ const App = () => {
   // let isTrue = true;
   // isTrue = false
 
+
+  // Tuples
+  // Tuple is a type that represents an array with a FIXED NUMBER OF ELEMENT where each element can have a different type . The order of the types in the tuples definition corresponds to the order of the values in the actual array , tuples are similar to array , but they have a specific structure and can be used to model finite sequences with known lengths
+
+  // let myTuple: [string,number] = ["hello",42]
+  // console.log(myTuple[0]);
+  // console.log(myTuple[1]);
+
+  //          Or 
+  // const [first,second] = myTuple
+  // Then clg first and second
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
