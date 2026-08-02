@@ -196,6 +196,24 @@ const App = () => {
   // const [first,second] = myTuple
   // Then clg first and second
 
+
+  // Enum 
+  // enum is a way to define a set of named constants , Enums allow you to define a collection of related values that can be used interchangeably in your code
+
+  // enum WeatherConditions {
+  //   Sunny = "sunny",
+  //   Cloudy = "cloudy",
+  //   Rainy = "rainy",
+  //   Snowy = "snowy"
+  // }
+
+  // use this instead 
+//   const Role = {
+//   ADMIN: "admin",
+//   USER: "user",
+// } 
+
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
