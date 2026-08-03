@@ -213,6 +213,8 @@ const App = () => {
 //   USER: "user",
 // } 
 
+// You should avoid using enums in TypeScript because they violate a core design principle: TypeScript should only be a compile-time type system that disappears entirely when compiled to JavaScript. Enums generate extra runtime code, degrade bundle optimization, and can introduce subtle type safety bugs. Even TypeScript's creator, Anders Hejlsberg, noted that if the language were rebuilt today, enums would likely be omitted.
+
 
   return (
     <div>
