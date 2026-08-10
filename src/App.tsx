@@ -216,6 +216,46 @@ const App = () => {
 // You should avoid using enums in TypeScript because they violate a core design principle: TypeScript should only be a compile-time type system that disappears entirely when compiled to JavaScript. Enums generate extra runtime code, degrade bundle optimization, and can introduce subtle type safety bugs. Even TypeScript's creator, Anders Hejlsberg, noted that if the language were rebuilt today, enums would likely be omitted.
 
 
+// Interface 
+
+// Interface is a way to define a Contact of the shape of an object . it specifies the properties and their types that an object must have. Interfaces are powerful tool for enforcing a certain structure in your code
+
+// Interface defination
+
+// interface PersonProperties {
+//   firstName : string,
+//   lastName : string,
+//   age : number,
+// }
+
+// useage
+
+// const examplePerson:PersonProperties = {
+//   firstName : "hanzla",
+//   lastName : "Jamil",
+//   age : 20,
+// }
+
+
+// Interface for function
+
+// interface MathOperation {
+//   (x:number , y:number) : number
+// }
+
+// const add : MathOperation = (a,b) => a + b;
+// const subtract : MathOperation = (a,b) => a - b;
+
+// console.log(add(2,3));
+// console.log(subtract(4,2));
+
+
+
+
+
+
+
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
