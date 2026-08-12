@@ -251,6 +251,34 @@ const App = () => {
 
 
 
+// Generics
+
+// In typeScript , generics allow you to create reusable components that can work with a variety of types .Generics make it possible for you to define functions , classes , and interfaces , that can work with different data types without having dublicate code.
+
+// normal function
+
+// const printString = (x:string) => console.log(x);
+// const printNumber = (x:number) => console.log(x);
+// const printBoolean = (x:boolean) => console.log(x);
+
+
+// console.log(printString("hello"));
+// console.log(printNumber(1));
+// console.log(printBoolean(true));
+
+
+// Generics
+
+function printInfo<T>(x: T):T  {
+  return x;
+}
+
+const str = printInfo<string>("Hello")
+const num = printInfo<number>(20)
+const bool = printInfo<boolean>(true)
+
+console.log(`String : ${str} , Number : ${num} , Boolean : ${bool}`);
+
 
 
 
