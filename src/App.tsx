@@ -269,15 +269,58 @@ const App = () => {
 
 // Generics
 
-function printInfo<T>(x: T):T  {
-  return x;
+// function printInfo<T>(x: T):T  {
+//   return x;
+// }
+
+// const str = printInfo<string>("Hello")
+// const num = printInfo<number>(20)
+// const bool = printInfo<boolean>(true)
+
+// console.log(`String : ${str} , Number : ${num} , Boolean : ${bool}`);
+
+// Same data Types of the arguments
+
+
+// function printData<T>(info:T , defaultValue:T):  { info: T; defaultValue: T } {
+//   return {info , defaultValue};
+// }
+
+// const result = printData<string>("information text , this could be any length","99")
+
+// console.log(result);
+
+// Different data types of the argument
+
+// function printData<T , U>(info:T , defaultValue:U) : {info:T , defaultValue : U} {
+//   return {info , defaultValue}
+// }
+
+// const result = printData<string , number>("Hello",123)
+
+// console.log(result);
+
+// Object Generics 
+
+function randomKeyValuePair<T>(obj: { [key: string]: T}): {
+  key : string;
+  value : T;
+} {
+  const keys = Object.keys(obj);
+  const randomKey = keys[Math.floor(Math.random() * keys.length)]
+  
+
+  return { key : randomKey , value : obj[randomKey] }
 }
 
-const str = printInfo<string>("Hello")
-const num = printInfo<number>(20)
-const bool = printInfo<boolean>(true)
-
-console.log(`String : ${str} , Number : ${num} , Boolean : ${bool}`);
+const result = randomKeyValuePair({
+  apple: 10,
+  banana: 20,
+  orange: 30,
+});
+console.log(result)
+// Possible result:
+// { key: "banana", value: 20 }
 
 
 
