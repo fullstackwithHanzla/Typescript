@@ -302,23 +302,23 @@ const App = () => {
 
 // Object Generics 
 
-function randomKeyValuePair<T>(obj: { [key: string]: T}): {
-  key : string;
-  value : T;
-} {
-  const keys = Object.keys(obj);
-  const randomKey = keys[Math.floor(Math.random() * keys.length)]
+// function randomKeyValuePair<T>(obj: { [key: string]: T}): {
+//   key : string;
+//   value : T;
+// } {
+//   const keys = Object.keys(obj);
+//   const randomKey = keys[Math.floor(Math.random() * keys.length)]
   
 
-  return { key : randomKey , value : obj[randomKey] }
-}
+//   return { key : randomKey , value : obj[randomKey] }
+// }
 
-const result = randomKeyValuePair({
-  apple: 10,
-  banana: 20,
-  orange: 30,
-});
-console.log(result)
+// const result = randomKeyValuePair({
+//   apple: 10,
+//   banana: 20,
+//   orange: 30,
+// });
+// console.log(result);
 // Possible result:
 // { key: "banana", value: 20 }
 
