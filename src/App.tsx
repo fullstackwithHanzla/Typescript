@@ -313,7 +313,7 @@ const App = () => {
 //   return { key : randomKey , value : obj[randomKey] }
 // }
 
-// Further understanding after some study
+// Further understanding is remaining w.r.t the practice
 
 // const result = randomKeyValuePair({
 //   apple: 10,
