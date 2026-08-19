@@ -313,7 +313,7 @@ const App = () => {
 //   return { key : randomKey , value : obj[randomKey] }
 // }
 
-// Further understanding is remaining w.r.t the practice
+// Further understanding is remaining w.r.t the practice 
 
 // const result = randomKeyValuePair({
 //   apple: 10,
@@ -329,10 +329,12 @@ const App = () => {
 
 
 
+
+
   return (
     <div>
         <h1 className="text-3xl font-medium w-full my-5 text-center">
-          TypeScript Series 
+          TypeScript Learning
         </h1>
 
         <div>
